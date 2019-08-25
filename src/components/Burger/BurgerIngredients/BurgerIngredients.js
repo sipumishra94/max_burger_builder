@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./burgerIngredients.module.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class BurgerIngredients extends Component {
   render() {
@@ -12,7 +12,12 @@ class BurgerIngredients extends Component {
         //if break is not stated at the end of each case then the code will not return if switch and case are equal
         break;
       case "bread-top":
-        ingredient = <div className={styles.BreadTop} />;
+        ingredient = (
+          <div className={styles.BreadTop}>
+            <div className={styles.Seeds1}></div>
+            <div className={styles.Seeds2}></div>
+          </div>
+        );
         break;
       case "meat":
         ingredient = <div className={styles.Meat} />;
